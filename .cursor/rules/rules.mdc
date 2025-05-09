@@ -1,0 +1,81 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Fast-SMS Project Rules
+
+## Technology Stack
+- Python 3.8+
+- AWS SNS for SMS messaging
+- Tkinter for GUI development
+- Watchdog for file monitoring
+- Boto3 for AWS integration
+- pytest for testing
+
+## Project Organization
+/fast-sms
+├── /src                  # Main source code
+│   ├── /core             # Core application logic
+│   │   ├── __init__.py
+│   │   ├── file_monitor.py  # File watching functionality
+│   │   ├── pattern_matcher.py  # Text pattern matching
+│   │   └── alert_manager.py  # Alert processing
+│   │
+│   ├── /services         # External services
+│   │   ├── __init__.py
+│   │   ├── aws_sns.py    # AWS SNS for SMS
+│   │   └── local_notify.py  # Local desktop notifications
+│   │
+│   ├── /ui               # User interface components
+│   │   ├── __init__.py
+│   │   ├── main_window.py  # Main application window
+│   │   ├── monitor_tab.py  # File monitoring UI
+│   │   ├── patterns_tab.py  # Pattern configuration UI
+│   │   └── settings_tab.py  # SMS and app settings UI
+│   │
+│   ├── /utils            # Utility functions
+│   │   ├── __init__.py
+│   │   ├── config.py     # Configuration management
+│   │   └── logging.py    # Logging utilities
+│   │
+│   └── main.py           # Application entry point
+│
+├── /tests                # Test files
+├── /resources            # Static resources
+├── README.md             # Project documentation
+├── requirements.txt      # Dependencies
+└── setup.py              # Installation script
+
+## Code Style
+- Follow PEP 8 conventions
+- Use snake_case for functions/variables, PascalCase for classes
+- Add type hints to all function signatures
+- Include docstrings for all modules, classes, and functions
+- Keep functions focused and under 50 lines where possible
+
+## Core Features
+- Real-time log file monitoring
+- Pattern matching with regular expressions
+- SMS notifications via AWS SNS
+- Local desktop notifications
+- Configuration UI for all settings
+
+## Architecture Principles
+- Separation of concerns
+- Event-driven design
+- Modular components
+- Error resilience
+
+## Testing Requirements
+- Unit tests for core functionality
+- Mock external services in tests
+- Test configuration edge cases
+- Verify error handling
+
+## Documentation
+- README with setup instructions
+- Code docstrings
+- User guide for configuration
+
+- AWS SNS setup guide
