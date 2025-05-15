@@ -20,7 +20,7 @@ A sleek, modern application for monitoring log files and sending SMS alerts when
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/fast-sms.git
+   git clone https://github.com/unstableantimatter/fast-sms.git
    cd fast-sms
    ```
 
